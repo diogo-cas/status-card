@@ -49,6 +49,8 @@ export function stateActive(stateObj: HassEntity, state?: string): boolean {
       return compareState === "active";
     case "camera":
       return compareState === "streaming";
+    case "thermostat":
+      return !["off", "idle"].includes(compareState);
   }
 
   return true;
