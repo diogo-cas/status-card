@@ -48,7 +48,7 @@ function omitKey<T extends Record<string, unknown>>(obj: T, key: string): T {
   return rest as T;
 }
 
-@customElement("status-card-editor")
+@customElement("status-card-hvac-mod-editor")
 export class StatusCardEditor extends LitElement {
   @property({ attribute: false }) public hass!: HomeAssistant;
   @property({ attribute: false }) public lovelace?: unknown;
