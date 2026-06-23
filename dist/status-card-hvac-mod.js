@@ -818,7 +818,6 @@ const Lt = [
   "idle",
   "standby",
   "paused",
-  "auto",
   "not_home",
   "disarmed",
   "0"
