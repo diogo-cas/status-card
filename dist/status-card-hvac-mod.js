@@ -816,8 +816,7 @@ var js = [
   "heat",
   "cool",
   "dry",
-  "fan_only",
-  "off"
+  "fan_only"
 ];
 const Lt = [
   "closed",
