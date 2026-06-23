@@ -6,16 +6,8 @@ export const STATES_OFF = [
   "idle",
   "standby",
   "paused",
-  "auto",
   "not_home",
   "disarmed",
-  "0",
-];
-
-export const STATES_OFF_HVAC = [
-  "off",
-  "idle",
-  "standby",
   "0",
 ];
 
