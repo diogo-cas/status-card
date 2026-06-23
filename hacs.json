@@ -1,7 +1,7 @@
 {
-  "name": "status-card-fork",
+  "name": "status-card-hvac-mod",
   "content_in_root": false,
   "render_readme": true,
-  "filename": "status-card.js",
+  "filename": "status-card-hvac-mod.js",
   "homeassistant": "2026.3.0"
 }
