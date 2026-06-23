@@ -12,6 +12,13 @@ export const STATES_OFF = [
   "0",
 ];
 
+export const STATES_OFF_HVAC = [
+  "off",
+  "idle",
+  "standby",
+  "0",
+];
+
 export const BINARY_STATE_ON = "on";
 export const BINARY_STATE_OFF = "off";
 
