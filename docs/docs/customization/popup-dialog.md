@@ -28,7 +28,7 @@ Some settings also affect the pop-up settings, even though they are primarily in
 This is done withe the 'Enable Total Entities' setting. It will show all entities no matter the state.
 
 ```yaml
-type: custom:status-card
+type: custom:status-card-hvac-mod
 show_total_entities: true
 ```
 
