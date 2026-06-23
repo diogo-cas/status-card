@@ -1128,15 +1128,15 @@ class Ho extends HTMLElement {
     }), t.addEventListener("click", t.actionHandler.end), t.addEventListener("keydown", t.actionHandler.handleKeyDown)));
   }
 }
-customElements.define("action-handler-status-card", Ho);
+customElements.define("action-handler-status-card-hvac-mod", Ho);
 const Vo = () => {
   const e = document.body;
-  if (e.querySelector("action-handler-status-card"))
+  if (e.querySelector("action-handler-status-card-hvac-mod"))
     return e.querySelector(
-      "action-handler-status-card"
+      "action-handler-status-card-hvac-mod"
     );
   const t = document.createElement(
-    "action-handler-status-card"
+    "action-handler-status-card-hvac-mod"
   );
   return e.appendChild(t), t;
 }, $o = (e, t) => {
@@ -2472,7 +2472,7 @@ const Wo = [
     i === "toggle_domain" ? this.handleAskToggleDomain() : i === "toggle_all" && this.handleAskToggleAll();
   }
   handleAskToggleDomain() {
-    const t = "status-card-popup-confirmation";
+    const t = "status-card-hvac-mod-popup-confirmation";
     this.dispatchEvent(
       new CustomEvent("show-dialog", {
         detail: {
@@ -2971,7 +2971,7 @@ D([
 D([
   A()
 ], Z.prototype, "_entities");
-customElements.define("status-card-popup", Z);
+customElements.define("status-card-hvac-mod-popup", Z);
 class ft extends R {
   constructor() {
     super(...arguments), this.open = !1, this._onPopState = () => {
@@ -3065,7 +3065,7 @@ D([
   M({ type: String })
 ], ft.prototype, "selectedDeviceClass");
 customElements.define(
-  "status-card-popup-confirmation",
+  "status-card-hvac-mod-popup-confirmation",
   ft
 );
 const qo = (e, t, i, s) => s ? [] : Object.values(e).filter(
@@ -3622,7 +3622,7 @@ let $ = class extends R {
       e,
       this.selectedDeviceClass || void 0
     ) : !1;
-    this._showPopup(this, "status-card-popup", {
+    this._showPopup(this, "status-card-hvac-mod-popup", {
       title: t,
       hass: this.hass,
       entities: i,
@@ -4146,7 +4146,7 @@ let $ = class extends R {
     return [Go];
   }
   static getConfigElement() {
-    return document.createElement("status-card-editor");
+    return document.createElement("status-card-hvac-mod-editor");
   }
   static getStubConfig() {
     return {};
@@ -4231,7 +4231,7 @@ w([
   A()
 ], $.prototype, "_parsedGlobalStateCss", 2);
 $ = w([
-  Pt("status-card")
+  Pt("status-card-hvac-mod")
 ], $);
 function nn(e, t, i, s, o) {
   const n = (d, h, p) => Ht(e, d, h, p), a = n({ name: "area" }), r = n({ name: "floor" }), l = n({ name: "name" }), c = n({ name: "state" });
@@ -4848,7 +4848,7 @@ K([
   A()
 ], U.prototype, "_activeTab", 2);
 U = K([
-  Pt("status-card-item-editor")
+  Pt("status-card-hvac-mod-item-editor")
 ], U);
 var fn = Object.defineProperty, mn = Object.getOwnPropertyDescriptor, Rt = (e, t, i, s) => {
   for (var o = s > 1 ? void 0 : s ? mn(t, i) : t, n = e.length - 1, a; n >= 0; n--)
@@ -5471,7 +5471,7 @@ let q = class extends R {
           <span slot="title">${a}</span>
         </div>
       </div>
-      <status-card-item-editor
+      <status-card-hvac-mod-item-editor
         .hass=${this.hass}
         .lovelace=${this.lovelace}
         .config=${((_ = (u = this._config) == null ? void 0 : u.customization) == null ? void 0 : _[(o == null ? void 0 : o.index) ?? 0]) ?? {}}
@@ -5480,7 +5480,7 @@ let q = class extends R {
         .isGroup=${r}
         @config-changed=${i}
       >
-      </status-card-item-editor>
+      </status-card-hvac-mod-item-editor>
     `;
   }
   _customizationChanged(e, t) {
@@ -6169,23 +6169,23 @@ st([
   A()
 ], q.prototype, "_activeTab", 2);
 q = st([
-  Pt("status-card-editor")
+  Pt("status-card-hvac-mod-editor")
 ], q);
 console.info(
-  `%c STATUS-CARD %c ${N1.version} `,
+  `%c STATUS-CARD HVAC MOD %c ${N1.version} `,
   "color: steelblue; background: black; font-weight: bold;",
   "color: white ; background: dimgray; font-weight: bold;"
 );
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: "status-card",
+  type: "status-card-hvac-mod",
   name: "Status Card",
   preview: !0,
   description: "A custom card that displays active entities grouped by domain/device class."
 });
 window.customBadges = window.customBadges || [];
 window.customBadges.push({
-  type: "status-card",
+  type: "status-card-hvac-mod",
   name: "Status Card",
   preview: !0,
   description: "A custom card that displays active entities grouped by domain/device class."
