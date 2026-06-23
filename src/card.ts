@@ -69,7 +69,7 @@ import {
 import { handleDomainAction, toggleDomain } from "./card-actions";
 import { mdiFormatListGroup } from "@mdi/js";
 
-@customElement("status-card")
+@customElement("status-card-hvac-mod")
 export class StatusCard extends LitElement {
   @property({ type: Object }) public _config!: LovelaceCardConfig;
   @state() private entitiesByDomain: { [domain: string]: HassEntity[] } = {};
@@ -541,7 +541,7 @@ export class StatusCard extends LitElement {
           )
         : false;
 
-    const dialogTag = "status-card-popup";
+    const dialogTag = "status-card-hvac-mod-popup";
     this._showPopup(this, dialogTag, {
       title,
       hass: this.hass,
@@ -1374,7 +1374,7 @@ export class StatusCard extends LitElement {
   }
 
   static getConfigElement() {
-    return document.createElement("status-card-editor");
+    return document.createElement("status-card-hvac-mod-editor");
   }
 
   static getStubConfig() {
